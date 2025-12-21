@@ -1,14 +1,15 @@
 import os
+from typing import Generator
 from dotenv import load_dotenv
 load_dotenv()
-def main():
+
+def get_password_chars_list(chars_index:list[int]) -> Generator[str]:
     my_password: str = os.getenv('PASSWORD')
-    num_indexes: list[int] = [1, 3]
-    password_chars: list[str] = [my_password[n - 1] for n in num_indexes]
-    print(password_chars)
+    password_chars: Generator[str] = (my_password[i - 1] for i in chars_index)
+    return password_chars
+def main():
+    chars_index_list: list[str] = list(get_password_chars_list(chars_index=[1,2]))
+    print(list(chars_index_list))
 
 if __name__ == '__main__':
     main()
-# Untrack files
-
-# Remove files
