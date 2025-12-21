@@ -8,7 +8,7 @@ def get_password_chars_list(chars_index:list[int]) -> Generator[str]:
     password_chars: Generator[str] = (my_password[i - 1] for i in chars_index)
     return password_chars
 def main():
-    chars_index_list: list[str] = list(get_password_chars_list(chars_index=[1,2]))
+    chars_index_list: list[str] = list(get_password_chars_list(chars_index=[1, 2, 3]))
     print(list(chars_index_list))
 
 if __name__ == '__main__':
