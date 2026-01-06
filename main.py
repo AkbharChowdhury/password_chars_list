@@ -6,12 +6,12 @@ load_dotenv()
 
 
 def get_password_chars_list(chars_index: list[int]) -> Generator[str]:
-    my_password: str = os.getenv('PASSWORD')
-    return (my_password[i - 1] for i in chars_index)
+    password: str = os.getenv('PASSWORD')
+    return (password[i - 1] for i in chars_index)
 
 
 def main():
-    chars_index_list: list[str] = list(get_password_chars_list(chars_index=[2, 4, 11]))
+    chars_index_list: list[str] = list(get_password_chars_list(chars_index=[3, 4, 5]))
     print(chars_index_list)
 
 
