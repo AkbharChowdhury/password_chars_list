@@ -11,7 +11,7 @@ def get_password_chars_list(chars_index: list[int]) -> Generator[str]:
 
 
 def main():
-    chars_index_list: list[str] = list(get_password_chars_list(chars_index=[3, 4, 5]))
+    chars_index_list: list[str] = list(get_password_chars_list(chars_index=[6, 9, 16]))
     print(chars_index_list)
 
 
